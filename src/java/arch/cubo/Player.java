@@ -2,8 +2,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
-package com.arch.cubo
-
 public class Player{
   
   int speed = 1;

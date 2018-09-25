@@ -6,12 +6,13 @@ import java.util.*;
 import java.io.File;
 import javax.imageio.ImageIO;
 
-package com.arch.cubo;
+
 
 public class Game extends JFrame {
+  
  
   static final long serialVersionUID = 100;
- 
+  
   boolean isRunning = true;
   boolean isLose = false;
   boolean isCount = false;
@@ -116,10 +117,12 @@ public class Game extends JFrame {
     wall.add(new GameObject(0, wHeight-40, wWidth, 40));
     wall.add(new GameObject(0, 0, wWidth, 40));
     goal.set(wWidth, wHeight);
+    /* //experimental button code
     JButton start = new JButton("Start Game");
     JButton credits = new JButton("Credits");
+    */
     text.add(new Text(98, 85, "Cubo's Adventure", Color.RED, 36));
-    
+    /* //more experimental button code
     add(start);
     start.setBounds(300, 220, 40, 15);
     start.setVisible(true);
@@ -129,7 +132,7 @@ public class Game extends JFrame {
     
     System.out.println(start.getX()+" "+start.getY()+" "+start.getWidth()+" "+start.getHeight());
     System.out.println(credits.getX()+" "+credits.getY()+" "+credits.getWidth()+" "+credits.getHeight());
-                       
+    */                   
     while(!input.isKeyDown(KeyEvent.VK_ENTER)){draw(Color.BLUE);}
     clear();
   }

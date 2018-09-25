@@ -1,8 +1,6 @@
 import java.awt.Component;
 import java.awt.event.*;
 
-package com.arch.cubo;
-
 public class InputHandler implements KeyListener{
   
   boolean[] keys = new boolean[256];

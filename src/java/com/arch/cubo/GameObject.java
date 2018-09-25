@@ -1,4 +1,4 @@
-package cubo;
+package com.arch.cubo;
 
 public class GameObject{
   

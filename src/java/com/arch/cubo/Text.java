@@ -1,6 +1,6 @@
 import java.awt.*;
 
-package cubo;
+package com.arch.cubo;
 
 public class Text extends GameObject{
   

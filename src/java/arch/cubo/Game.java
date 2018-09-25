@@ -64,7 +64,7 @@ public class Game extends JFrame {
     setResizable(false);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setVisible(true);
-    setIconImage(ImageIO.read(new File("icon.png")));
+    setIconImage(ImageIO.read(new File("assets/icon.png")));
     insets = getInsets();
     setSize(insets.left + wWidth + insets.right, insets.top + wHeight + insets.bottom);
     backBuffer = new BufferedImage(wWidth, wHeight, BufferedImage.TYPE_INT_RGB);
@@ -419,7 +419,7 @@ public class Game extends JFrame {
                       spikeLeft.get(i).y+(j+1)*spikeLeft.get(i).h/spikeLeft.get(i).amount-(int)(k+.5)-2, 1, 2);
    }}}}
     for (int i = 0; i < text.size(); i++){
-      Font currentFont = Font.createFont(Font.TRUETYPE_FONT, new File("FORCED SQUARE.ttf"));
+      Font currentFont = Font.createFont(Font.TRUETYPE_FONT, new File("assets/FORCED SQUARE.ttf"));
       Font newFont = currentFont.deriveFont(currentFont.getSize() * text.get(i).size);
       bbg.setFont(newFont);
       bbg.setColor(text.get(i).color);
@@ -445,7 +445,7 @@ public class Game extends JFrame {
       bbg.setColor(new Color(200, 200, 200));
       bbg.fillRect(50, 40, 100, 20);
       bbg.setColor(Color.BLACK);
-      Font currentFont = Font.createFont(Font.TRUETYPE_FONT, new File("FORCED SQUARE.ttf"));
+      Font currentFont = Font.createFont(Font.TRUETYPE_FONT, new File("assets/FORCED SQUARE.ttf"));
       Font newFont = currentFont.deriveFont(currentFont.getSize() * 18f);
       bbg.setFont(newFont);
       bbg.drawString("Deaths: ", 60, 55);
@@ -464,7 +464,7 @@ public class Game extends JFrame {
   /*if(false){
       bbg.setColor(new Color(255, 128, 128));
       bbg.fillRect(60, 40, wWidth-120, wHeight-80);
-      Font currentFont = Font.createFont(Font.TRUETYPE_FONT, new File("FORCED SQUARE.ttf"));
+      Font currentFont = Font.createFont(Font.TRUETYPE_FONT, new File("assets/FORCED SQUARE.ttf"));
       Font newFont = currentFont.deriveFont(currentFont.getSize() * 60f);
       bbg.setFont(newFont);
       bbg.setColor(Color.RED);
@@ -473,8 +473,3 @@ public class Game extends JFrame {
     g.drawImage(backBuffer, insets.left, insets.top, this);
   }
 }
-
-
-
-
-

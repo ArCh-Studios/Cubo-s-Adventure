@@ -6,7 +6,7 @@ import java.util.*;
 import java.io.File;
 import javax.imageio.ImageIO;
 
-package cubo;
+package com.arch.cubo;
 
 public class Game extends JFrame {
  

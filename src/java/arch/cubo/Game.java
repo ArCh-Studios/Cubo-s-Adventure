@@ -52,7 +52,7 @@ public class Game extends JFrame {
     do{game.scene5();}while(game.isLose);
     do{game.scene6();}while(game.isLose);
     do{game.scene7();}while(game.isLose);
-    //do{game.scene8();}while(game.isLose);
+    //do{game.scene8();}while(game.isLose);   This scene is in development
     game.isCount = false;
     do{game.sceneEnd();}while(game.isLose);
     System.exit(0);
@@ -88,8 +88,9 @@ public class Game extends JFrame {
     if(input.isKeyDown(KeyEvent.VK_RIGHT)||input.isKeyDown(KeyEvent.VK_D)){p.right();}
     if(input.isKeyDown(KeyEvent.VK_LEFT)||input.isKeyDown(KeyEvent.VK_A)){p.left();}
     boolean[] b = p.touchArray(breakWall);
-    for (int i = 0; i < breakWall.size(); i++){if (breakWall.get(i).t>0&&(!b[i]||breakWall.get(i).t<90)){
-      breakWall.get(i).t--;if(breakWall.get(i).t==0){breakWall.remove(i);}}}
+    //        In Development
+    //for (int i = 0; i < breakWall.size(); i++){if (breakWall.get(i).t>0&&(!b[i]||breakWall.get(i).t<90)){
+    //  breakWall.get(i).t--;if(breakWall.get(i).t==0){breakWall.remove(i);}}}
     ArrayList<GameObject> allWalls = new ArrayList<GameObject>();
     for (int i = 0; i < wall.size(); i++){allWalls.add(wall.get(i));}
     for (int i = 0; i < breakWall.size(); i++){allWalls.add(breakWall.get(i));}
@@ -296,7 +297,7 @@ public class Game extends JFrame {
     run(Color.WHITE);
     clear();
   }
- 
+ // Scene 8 in development
   void scene8()throws Exception{
     isLose = false;
     scene8_1(41, 302);
@@ -461,6 +462,7 @@ public class Game extends JFrame {
     bbg.setColor(Color.BLACK);
     bbg.fillRect(p.x+p.eye, p.y+7, 3, 7);
     bbg.fillRect(p.x+p.eye+6, p.y+7, 3, 7);
+    //   This is the old death messasge
   /*if(false){
       bbg.setColor(new Color(255, 128, 128));
       bbg.fillRect(60, 40, wWidth-120, wHeight-80);

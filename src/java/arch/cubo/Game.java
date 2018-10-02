@@ -89,6 +89,7 @@ public class Game extends JFrame {
   void update()throws Exception{
     if(input.isKeyDown(KeyEvent.VK_RIGHT)||input.isKeyDown(KeyEvent.VK_D)){p.right();}
     if(input.isKeyDown(KeyEvent.VK_LEFT)||input.isKeyDown(KeyEvent.VK_A)){p.left();}
+    if(input.isKeyDown(KeyEvent.VK_ESCAPE)){System.exit(0);}
     //        In Development
     //boolean[] b = p.touchArray(breakWall);
     //for (int i = 0; i < breakWall.size(); i++){if (breakWall.get(i).t>0&&(!b[i]||breakWall.get(i).t<90)){

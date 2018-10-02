@@ -63,6 +63,8 @@ public class Game extends JFrame {
     setSize(wWidth, wHeight);
     setResizable(false);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
+    //setExtendedState(JFrame.MAXIMIZED_BOTH);
+    //setUndecorated(true);
     setVisible(true);
     setIconImage(ImageIO.read(new File("assets/icon.png")));
     insets = getInsets();
@@ -87,8 +89,8 @@ public class Game extends JFrame {
   void update()throws Exception{
     if(input.isKeyDown(KeyEvent.VK_RIGHT)||input.isKeyDown(KeyEvent.VK_D)){p.right();}
     if(input.isKeyDown(KeyEvent.VK_LEFT)||input.isKeyDown(KeyEvent.VK_A)){p.left();}
-    boolean[] b = p.touchArray(breakWall);
     //        In Development
+    //boolean[] b = p.touchArray(breakWall);
     //for (int i = 0; i < breakWall.size(); i++){if (breakWall.get(i).t>0&&(!b[i]||breakWall.get(i).t<90)){
     //  breakWall.get(i).t--;if(breakWall.get(i).t==0){breakWall.remove(i);}}}
     ArrayList<GameObject> allWalls = new ArrayList<GameObject>();
